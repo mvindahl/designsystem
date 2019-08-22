@@ -21,6 +21,6 @@ export const routes: Routes = [
   },
   {
     path: 'examples',
-    loadChildren: './examples/examples-routing.module#ExamplesRoutingModule',
+    loadChildren: () => import('./examples/examples-routing.module').then(m => m.ExamplesRoutingModule),
   },
 ];
