@@ -20,7 +20,7 @@ describe('ChartComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ChartComponent);
     component = fixture.componentInstance;
-    component.data = this.data;
+    // component.data = this.data; //TODO: this is undefined in karma 4.2.0, consider fix or remove
     fixture.detectChanges();
   });
 
