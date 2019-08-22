@@ -7,5 +7,5 @@ declare var require: any;
   styleUrls: ['./empty-state-showcase.component.scss'],
 })
 export class EmptyStateShowcaseComponent {
-  exampleHtml: string = require('../../examples/empty-state-example/empty-state-example.component.html');
+  exampleHtml: string = require('raw-loader!../../examples/empty-state-example/empty-state-example.component.html');
 }

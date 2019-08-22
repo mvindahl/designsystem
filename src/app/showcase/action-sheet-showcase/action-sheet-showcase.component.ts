@@ -10,7 +10,7 @@ declare var require: any;
   preserveWhitespaces: true,
 })
 export class ActionSheetShowcaseComponent {
-  exampleHtml: string = require('../../examples/action-sheet-example/action-sheet-example.component.html');
+  exampleHtml: string = require('raw-loader!../../examples/action-sheet-example/action-sheet-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'header',

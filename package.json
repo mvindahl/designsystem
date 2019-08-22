@@ -49,7 +49,7 @@
     "@types/prismjs": "1.16.0",
     "core-js": "3.2.1",
     "firebase": "6.4.0",
-    "highcharts": "7.1.3",
+    "highcharts": "7.0.3",
     "moment": "2.24.0",
     "nativescript-angular": "8.2.0",
     "nativescript-checkbox": "3.0.3",

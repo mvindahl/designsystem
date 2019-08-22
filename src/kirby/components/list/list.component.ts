@@ -85,11 +85,12 @@ export class ListComponent implements OnChanges {
   @Output() itemSelect = new EventEmitter<any>();
 
   // The first element that matches ListItemDirective. As a structural directive it unfolds into a template. This is a reference to that.
-  @ContentChild(ListItemDirective, { read: TemplateRef }) listItemTemplate;
-  @ContentChild(ListFlexItemDirective, { read: TemplateRef }) listFlexItemTemplate;
-  @ContentChild(ListHeaderDirective, { read: TemplateRef }) listHeaderTemplate;
-  @ContentChild(ListSectionHeaderDirective, { read: TemplateRef }) sectionHeaderTemplate;
-  @ContentChild(ListFooterDirective, { read: TemplateRef }) listFooterTemplate;
+  @ContentChild(ListItemDirective, { read: TemplateRef, static: true }) listItemTemplate;
+  @ContentChild(ListFlexItemDirective, { read: TemplateRef, static: true }) listFlexItemTemplate;
+  @ContentChild(ListHeaderDirective, { read: TemplateRef, static: true }) listHeaderTemplate;
+  @ContentChild(ListSectionHeaderDirective, { read: TemplateRef, static: true })
+  sectionHeaderTemplate;
+  @ContentChild(ListFooterDirective, { read: TemplateRef, static: true }) listFooterTemplate;
 
   @HostBinding('class.has-sections') isSectionsEnabled: boolean;
   isSelectable: boolean;

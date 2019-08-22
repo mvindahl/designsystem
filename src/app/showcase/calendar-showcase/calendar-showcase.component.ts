@@ -28,8 +28,8 @@ export class CalendarShowcaseComponent {
     this.maxDate.setDate(today.getDate() + 60);
   }
 
-  exampleHtml: string = require('../../examples/calendar-example/calendar-example.component.html');
-  exampleWithCardHtml: string = require('../../examples/calendar-example/calendar-card-example.component.html');
+  exampleHtml: string = require('raw-loader!../../examples/calendar-example/calendar-example.component.html');
+  exampleWithCardHtml: string = require('raw-loader!../../examples/calendar-example/calendar-card-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'selectedDate',

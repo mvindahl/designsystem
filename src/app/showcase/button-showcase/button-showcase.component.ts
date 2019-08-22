@@ -11,7 +11,7 @@ import { ShowcaseProperty } from '~/app/shared/showcase-properties/showcase-prop
 export class ButtonShowcaseComponent {
   themeColors = ['light', 'white', 'dark'];
   themeColor = '';
-  exampleHtml: string = require('../../examples/button-example/button-example.component.html');
+  exampleHtml: string = require('raw-loader!../../examples/button-example/button-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'expand',

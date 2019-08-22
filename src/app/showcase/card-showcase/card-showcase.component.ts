@@ -9,7 +9,7 @@ declare var require: any;
   styleUrls: ['./card-showcase.component.scss'],
 })
 export class CardShowcaseComponent {
-  exampleHtml: string = require('../../examples/card-example/card-example.component.html');
+  exampleHtml: string = require('raw-loader!../../examples/card-example/card-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'title',
