@@ -19,9 +19,9 @@ enum PanStates {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SlideButtonComponent extends SlideButtonCommon implements OnInit {
-  @ViewChild('slideTextRef') slideTextRef: ElementRef;
-  @ViewChild('slideThumbnailRef') slideThumbnailRef: ElementRef;
-  @ViewChild('container') container: ElementRef;
+  @ViewChild('slideTextRef', { static: true }) slideTextRef: ElementRef;
+  @ViewChild('slideThumbnailRef', { static: true }) slideThumbnailRef: ElementRef;
+  @ViewChild('container', { static: true }) container: ElementRef;
   slideThumbnailElm: Button;
   virtualPanXPosition = 0; // this is used to get the tap x position when dragging out of sliding frame
   prevDeltaX: number;
