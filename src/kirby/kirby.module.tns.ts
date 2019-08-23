@@ -5,7 +5,7 @@ import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { NativeScriptUIChartModule } from 'nativescript-ui-chart/angular';
 import { NativeScriptUIListViewModule } from 'nativescript-ui-listview/angular';
 
-import { TNSCheckBoxModule } from 'nativescript-checkbox/angular';
+import { TNSCheckBoxModule } from '@nstudio/nativescript-checkbox/angular';
 // tslint:disable-next-line:import-line-spacing
 import { overrideModalViewMethod, ModalStack } from 'nativescript-windowed-modal';
 
