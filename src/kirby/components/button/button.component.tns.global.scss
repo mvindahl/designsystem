@@ -13,7 +13,6 @@ Button[kirby-button] {
   padding: size('xxs') size('m') size('xxs') size('m');
   font-size: font-size('s');
   height: size('xl');
-  line-height: line-height('xs');
 
   &.sm {
     padding: size('xxxs') size('s') size('xxxs') size('s');
@@ -24,6 +23,7 @@ Button[kirby-button] {
   &.lg {
     font-size: font-size('s');
     height: size('xxl');
+    min-width: 220;
   }
 
   &.attention-level1 {
@@ -77,6 +77,10 @@ Button[kirby-button] {
   &[isEnabled=false] {
     background-color: get-color('light-tint');
     border-color: get-color('light-tint');
+  }
+
+  Span.icon {
+    font-size: inherit;
   }
 }
 
