@@ -37,5 +37,5 @@ export class ButtonComponent {
   @Input() text?: string;
   @Input() iconPlacement?: 'left' | 'right' = 'left';
 
-  @ContentChild(IconComponent) icon: IconComponent;
+  @ContentChild(IconComponent, { static: true }) icon: IconComponent;
 }

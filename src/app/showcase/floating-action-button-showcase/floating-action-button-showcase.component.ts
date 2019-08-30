@@ -9,7 +9,7 @@ declare var require: any;
   templateUrl: './floating-action-button-showcase.component.html',
 })
 export class FloatingActionButtonShowcaseComponent {
-  exampleHtml: string = require('raw-loader!../../examples/floating-action-button-example/floating-action-button-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/floating-action-button-example/floating-action-button-example.component.html');
 
   properties: ShowcaseProperty[] = [
     {

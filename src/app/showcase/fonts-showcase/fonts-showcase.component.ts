@@ -7,7 +7,7 @@ declare var require;
   styleUrls: ['./fonts-showcase.component.scss'],
 })
 export class FontsShowcaseComponent implements OnInit {
-  exampleHtml: string = require('raw-loader!../../examples/fonts-example/fonts-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/fonts-example/fonts-example.component.html');
 
   @Output() isCTABoxShown = new EventEmitter();
 

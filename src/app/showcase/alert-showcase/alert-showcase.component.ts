@@ -10,7 +10,7 @@ declare var require: any;
   preserveWhitespaces: true,
 })
 export class AlertShowcaseComponent {
-  exampleHtml: string = require('raw-loader!../../examples/alert-example/alert-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/alert-example/alert-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'title',

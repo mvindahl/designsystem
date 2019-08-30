@@ -7,7 +7,7 @@ declare var require: any;
   styleUrls: ['./chart-showcase.component.scss'],
 })
 export class ChartShowcaseComponent implements OnInit {
-  exampleHtml: string = require('raw-loader!../../examples/chart-example/chart-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/chart-example/chart-example.component.html');
 
   constructor() {}
 

@@ -7,7 +7,7 @@ declare var require: any;
   styleUrls: ['./list-showcase.component.scss'],
 })
 export class ListShowcaseComponent implements OnInit {
-  exampleHtml: string = require('raw-loader!../../examples/list/list-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/list/list-example.component.html');
 
   sectionHeaderExampleHtml: string =
     '<GridLayout *kirbyListSectionHeader="let section" ios:height="50">...</GridLayout>';

@@ -7,7 +7,7 @@ declare var require: any;
   styleUrls: ['./doughnut-chart-showcase.component.scss'],
 })
 export class DoughnutChartShowcaseComponent implements OnInit {
-  exampleHtml: string = require('raw-loader!../../examples/nativescript-only/doughnut-chart-example/doughnut-chart-example.component.tns-only.html');
+  exampleHtml: string = require('html-loader!../../examples/nativescript-only/doughnut-chart-example/doughnut-chart-example.component.tns-only.html');
 
   constructor() {}
 

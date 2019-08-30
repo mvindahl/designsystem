@@ -8,7 +8,7 @@ import { ShowcaseProperty } from '~/app/shared/showcase-properties/showcase-prop
   styleUrls: ['./slide-button-showcase.component.scss'],
 })
 export class SlideButtonShowcaseComponent {
-  exampleHtml: string = require('raw-loader!../../examples/slide-button-example/slide-button-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/slide-button-example/slide-button-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'expand',

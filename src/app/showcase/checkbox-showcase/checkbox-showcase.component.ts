@@ -7,5 +7,5 @@ declare var require: any;
   styleUrls: ['./checkbox-showcase.component.scss'],
 })
 export class CheckboxShowcaseComponent {
-  exampleHtml: string = require('raw-loader!../../examples/checkbox-example/checkbox-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/checkbox-example/checkbox-example.component.html');
 }

@@ -10,7 +10,7 @@ declare var require: any;
   preserveWhitespaces: true,
 })
 export class ModalShowcaseComponent {
-  exampleHtml: string = require('raw-loader!../../examples/modal-example/modal-example.component.html');
+  exampleHtml: string = require('html-loader!../../examples/modal-example/modal-example.component.html');
   properties: ShowcaseProperty[] = [
     {
       name: 'title',
