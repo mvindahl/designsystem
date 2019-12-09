@@ -42,6 +42,7 @@ import { TabsExampleComponent } from './tabs/tabs-example.component';
 import { TabExampleComponent } from './tabs/tab/tab-example.component';
 import { ItemExampleComponent } from './item-example/item-example.component';
 import { DividerExampleComponent } from './divider-example/divider-example.component';
+import { OverlayExampleComponent } from './overlay-example/overlay-example.component';
 
 // Example of "custom" icons
 export const iconSettings: IconSettings = {
@@ -100,6 +101,7 @@ export const COMPONENT_DECLARATIONS: any[] = [
   TabExampleComponent,
   ItemExampleComponent,
   DividerExampleComponent,
+  OverlayExampleComponent,
 ];
 
 // Configure custom icons (used by example to show the usage of custom icons)

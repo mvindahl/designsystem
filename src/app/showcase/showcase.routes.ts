@@ -34,6 +34,7 @@ import { PageShowcaseComponent } from './page-showcase/page-showcase.component';
 import { TabsShowcaseComponent } from './tabs-showcase/tabs-showcase.component';
 import { ItemShowcaseComponent } from '../showcase/item-showcase/item-showcase.component';
 import { DividerShowcaseComponent } from './divider-showcase/divider-showcase.component';
+import { OverlayShowcaseComponent } from './overlay-showcase/overlay-showcase.component';
 
 export const routes: Routes = [
   {
@@ -124,6 +125,10 @@ export const routes: Routes = [
       {
         path: 'loading-overlay',
         component: LoadingOverlayShowcaseComponent,
+      },
+      {
+        path: 'overlay',
+        component: OverlayShowcaseComponent,
       },
       {
         path: 'action-sheet',

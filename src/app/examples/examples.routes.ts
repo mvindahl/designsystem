@@ -45,6 +45,7 @@ import { ListColoredItemsExampleComponent } from './list/components/colored-item
 import { ListWithHeaderAndFooterExampleComponent } from './list/components/header-and-footer';
 import { ListWithSectionsExampleComponent } from './list/components/sections';
 import { ListItemsExampleComponent } from './list/components/items';
+import { OverlayExampleComponent } from './overlay-example/overlay-example.component';
 
 export const routes: Routes = [
   {
@@ -224,6 +225,10 @@ export const routes: Routes = [
   {
     path: 'loading-overlay',
     component: LoadingOverlayExampleComponent,
+  },
+  {
+    path: 'overlay',
+    component: OverlayExampleComponent,
   },
   {
     path: 'action-sheet',

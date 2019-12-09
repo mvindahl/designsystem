@@ -20,6 +20,7 @@ import { RouterOutletModule } from '@kirbydesign/designsystem/components/router-
 import { TabsModule } from '@kirbydesign/designsystem/components/tabs/tabs.module';
 import { IconModule } from '@kirbydesign/designsystem/components/icon/icon.module';
 import { ItemModule } from '@kirbydesign/designsystem/components/item/item.module';
+import { OverlayComponent } from './components/overlay/overlay.component';
 
 @NgModule({
   imports: [
@@ -44,6 +45,7 @@ import { ItemModule } from '@kirbydesign/designsystem/components/item/item.modul
     KeyHandlerDirective,
     FormFieldMessageComponent,
     AlertComponent,
+    OverlayComponent,
     ...declarations,
   ],
   providers: [...providerDeclarations],
@@ -52,6 +54,7 @@ import { ItemModule } from '@kirbydesign/designsystem/components/item/item.modul
     ActionSheetComponent,
     FullscreenLoadingOverlayComponent,
     AlertComponent,
+    OverlayComponent,
   ],
   exports: [
     InfiniteScrollDirective,

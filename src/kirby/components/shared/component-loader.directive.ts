@@ -25,10 +25,10 @@ export class ComponentLoaderDirective implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loadCard();
+    this.loadComponent();
   }
 
-  loadCard() {
+  loadComponent() {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
       this.configuration.component
     );
