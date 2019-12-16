@@ -6,45 +6,54 @@ import { ModalController } from '@kirbydesign/designsystem/modal';
 
 import { BasePageExampleComponent } from '../base-page-example.component';
 
-const customTitleConfig = {
-  template: `<kirby-page>
-  <div *kirbyPageToolbarTitle>A Fixed Title</div>
-  ...
-</kirby-page>`,
-};
-
-const fixedActionsConfig = {
-  template: `<kirby-page title="Normal Page Title">
-  <kirby-page-actions *kirbyPageActions="{fixed: true}">
-  ...
-  </kirby-page-actions>
-  ...
-</kirby-page>`,
-};
-
 const config = {
-  template: `<kirby-page toolbarTitle="A Fixed Title" defaultBackHref="/">
+  template: `<kirby-page defaultBackHref="/">
+
+  <!-- Custom Page Title -->
+  <h1 *kirbyPageTitle>
+    <ng-container *ngTemplateOutlet="customTitle"></ng-container>
+  </h1>
+
+  <ng-template kirbyPageToolbarTitle>
+    <ng-container *ngTemplateOutlet="customTitle"></ng-container>
+  </ng-template>
+
+  <ng-template #customTitle>
+    <div style="display: flex;">
+      <div style="overflow: hidden; text-overflow: ellipsis;">
+        Custom Title With a very long name
+      </div>
+      <kirby-icon name="arrow-down"></kirby-icon>
+    </div>
+  </ng-template>
+  
   <!-- Fixed Page Actions -->
   <kirby-page-actions *kirbyPageActions="{fixed: true}">
     <button kirby-button (click)="onMoreSelect()">
       <kirby-icon name="more"></kirby-icon>
     </button>
   </kirby-page-actions>
-  <!-- Page Content -->
-  <kirby-page-content>
-    <div [innerHTML]="content"></div>
-  </kirby-page-content>
+
+  <!-- Sticky Page Actions -->
+  <kirby-page-actions *kirbyPageActions>
+    <button kirby-button (click)="onCogSelect()">
+      <kirby-icon name="cog"></kirby-icon>
+    </button>
+  </kirby-page-actions>
+ 
+  <!-- Custom Content Template (without wrapper) -->
+  <div *kirbyPageContent [innerHTML]="content"></div>
+  
 </kirby-page>`,
 };
 @Component({
   template: config.template,
+  styles: ['.custom-page-title { display: inline-flex; }'],
 })
-export class PageFixedTitleAndActionsExampleComponent extends BasePageExampleComponent {
+export class PageCustomTitleExampleComponent extends BasePageExampleComponent {
   static readonly template = config.template
     .replace(' defaultBackHref="/"', '')
-    .replace('<div [innerHTML]="content"></div>', '...');
-  static readonly customTitleTemplate = customTitleConfig.template;
-  static readonly fixedActionsTemplate = fixedActionsConfig.template;
+    .replace(' [innerHTML]="content">', '>...');
 
   items: ActionSheetItem[] = [
     { id: '1', text: 'Option 1' },

@@ -10,35 +10,38 @@ const config = {
   template: `<kirby-page defaultBackHref="/">
 
   <!-- Custom Page Title -->
-  <h1 *kirbyPageTitle>
-    <ng-container *ngTemplateOutlet="customTitle"></ng-container>
-  </h1>
+  <div *kirbyPageTitle>
+    <h1>
+      <ng-container *ngTemplateOutlet="customTitle"></ng-container>
+    </h1>
+    <ng-container *ngTemplateOutlet="customSubTitle"></ng-container>
+  </div>
 
   <ng-template kirbyPageToolbarTitle>
     <ng-container *ngTemplateOutlet="customTitle"></ng-container>
   </ng-template>
 
   <ng-template #customTitle>
-    <div class="custom-page-title">
-      Custom
-      <kirby-icon name="arrow-down"></kirby-icon>
-    </div>
+    <span>Custom Title with a very long name</span>
+  </ng-template>
+  <ng-template #customSubTitle>
+    <span>Custom subtitle explaining something</span>
   </ng-template>
   
   <!-- Fixed Page Actions -->
   <kirby-page-actions *kirbyPageActions="{fixed: true}">
-    <button *ngIf="true" kirby-button (click)="onMoreSelect()">
+    <button kirby-button (click)="onMoreSelect()">
       <kirby-icon name="more"></kirby-icon>
     </button>
   </kirby-page-actions>
 
   <!-- Sticky Page Actions -->
   <kirby-page-actions *kirbyPageActions>
-    <button *ngIf="true" kirby-button (click)="onCogSelect()">
+    <button kirby-button (click)="onCogSelect()">
       <kirby-icon name="cog"></kirby-icon>
     </button>
   </kirby-page-actions>
-
+  
   <!-- Custom Content Template (without wrapper) -->
   <div *kirbyPageContent [innerHTML]="content"></div>
   
@@ -61,8 +64,7 @@ const config = {
 export class PageAdvancedExampleComponent extends BasePageExampleComponent {
   static readonly template = config.template
     .replace(' defaultBackHref="/"', '')
-    .replace(' [innerHTML]="content">', '>...')
-    .replace(' *ngIf="true"', '');
+    .replace(' [innerHTML]="content">', '>...');
 
   items: ActionSheetItem[] = [
     { id: '1', text: 'Option 1' },
