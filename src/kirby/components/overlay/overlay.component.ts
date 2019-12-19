@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Components } from '@ionic/core';
 
 import { ComponentConfiguration } from '../shared/component-configuration';
 
@@ -9,4 +10,5 @@ import { ComponentConfiguration } from '../shared/component-configuration';
 })
 export class OverlayComponent {
   @Input() component: ComponentConfiguration;
+  @Input() options: Components.IonBackdrop;
 }

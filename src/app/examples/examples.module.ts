@@ -9,6 +9,7 @@ import { SecondEmbeddedModalExampleComponent } from './modal-example/second-embe
 import { FormFieldExamplesModule } from './form-field-example/form-field-example.module';
 import { ListExamplesModule } from './list/list-example.module';
 import { ItemExampleModule } from './item-example/item-example.module';
+import { CloseOverlayComponent } from './overlay-example/components/close-overlay';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { ItemExampleModule } from './item-example/item-example.module';
     CardExampleComponent,
     FirstEmbeddedModalExampleComponent,
     SecondEmbeddedModalExampleComponent,
+    CloseOverlayComponent,
   ],
 })
 export class ExamplesModule {}

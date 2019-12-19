@@ -49,6 +49,7 @@ import { InputComponent } from './components/form-field/input/input.component';
 import { TextareaComponent } from './components/form-field/textarea/textarea.component';
 import { InputCounterComponent } from './components/form-field/input-counter/input-counter.component';
 import { DividerComponent } from './components/divider/divider.component';
+import { OverlayService } from './components/overlay/overlay.service';
 
 export const declarations = [
   CardComponent,
@@ -104,4 +105,5 @@ export const providerDeclarations: any[] = [
   AlertHelper,
   ToastHelper,
   ToastController,
+  OverlayService,
 ];

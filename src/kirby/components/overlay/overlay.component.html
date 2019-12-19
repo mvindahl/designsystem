@@ -1,2 +1,9 @@
-<ion-backdrop class="kirby-overlay"></ion-backdrop>
-<ng-template [kirbyLoadComponent]="component"></ng-template>
+<ion-backdrop
+  class="overlay"
+  [tappable]="options && options.tappable"
+  [visible]="options && options.visible"
+  [stopPropagation]="options && options.stopPropagation"
+></ion-backdrop>
+<div class="content">
+  <ng-template [kirbyLoadComponent]="component"></ng-template>
+</div>
